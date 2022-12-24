@@ -1,0 +1,133 @@
+<!DOCTYPE html> <!--Necessario al fine di far funzionare il file html-->
+
+<html> <!--Primo contenitore principale. Fa parte della struttura e va messo per forza.-->
+    <head> <!--Elemento della "testa" della pagina. Fa parte della struttura e va messo per forza. Sono quelle informazioni utili al sito ma non all'utente-->
+        <title>Prima pagina di HTML di testing.</title> <!--Titolo della pagina (nome nelle schede)-->
+    </head>
+
+    <body> <!--Elemento del "corpo" della pagina. Fa parte della struttura e va messo per forza. Contiene gli elementi da visualizzare e utili all'utente.-->
+        <h1>Ciao, sono un test! Sono gigante!</h1> <!--<h(1-6)>[Scritta]</h(1-6)> - Testo in varie dimensioni. La massima è 1 e la minima è 6.-->
+        <h2>Ciao, sono un test! Sono un sottotitolo!</h2>
+        <h3>Ciao, sono un test! Normalone!</h3>
+        <h4>Ciao, sono un test! Ci si rimpicciolisce!</h4>
+        <h5>Ciao, sono un test! Sono piccolo!</h5>
+        <h6>Ciao, sono un test! Aiuto!</h6>
+
+        <br><br><br>
+
+        <div> <!--Il div è un contenitore di altri elementi; è molto utile se devi modificare elementi specifici della pagina tramite CSS.-->
+            <div>
+                <h1>Salve. Questo è un test per far funzionare i div annidati.</h1>
+                <div>
+                    <h2>Se funziono, si visualizzerà senza problemi!</h2> 
+                </div>
+            </div>
+        </div> <!-- E' possibile annidare il codice mettendo elementi dentro altri.-->
+
+        <br><br><br>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula felis cursus placerat vulputate. <!--Scritta base di HTML, non va a capo. Solo con p andrà a capo.-->
+        <p>Phasellus eget augue eget odio luctus vulputate porttitor at velit. Duis mauris arcu, hendrerit eu urna vel, suscipit rutrum libero. <br> Praesent semper tellus sed arcu tincidunt sagittis. Nam sit amet pharetra nulla, eget hendrerit arcu. Aliquam diam risus, gravida eu ante nec, accumsan pulvinar orci. Sed sit amet tortor non libero tincidunt ultricies vitae a nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta sit amet sem sagittis tincidunt.  
+        <p>Vivamus id lorem elementum, elementum lorem sit amet, aliquet felis. Aliquam vitae tincidunt velit.</p></p> <!--Paragrafo, scritta base di HTML con l'eccezione che andrà sempre a capo.-->
+
+        <br><br><br>
+
+        Riga 1<br>  <!--Elemento br (break). Non va chiuso e semplicemente va a capo o crea righe vuote. Può essere inserito fra ogni stringa.-->
+        Riga 2<hr> <!--Elemento hr. Non va chiuso; va a capo creando un separatore.-->
+        Riga 3 (Muro di Berlino)
+
+        <br><br><br>
+
+        <p>Parola in <b>GRASSETTO!</b></p> <!--Tag b (bold). La stringa all'interno sarà resa in grassetto.-->
+        <p>Parola in <i>CORSIVO!</i></p> <!--Tag i (italic, corsivo). La stringa all'interno sarà resa in corsivo.-->
+        <p>Parola <u>SOTTOLINEATA!</u></p> <!--Tag u (underlined). La stringa all'interno sarà sottolineata.-->
+
+        <p>Parola in <strong>GRASSETTO!</strong></p> <!--Tag strong. La stringa all'interno sarà resa in grassetto. A differenza del b è più completo (a livello di tag aggiuntivi)-->
+        <p>Parola in <em>CORSIVO!</em></p> <!--Tag em (emphatized). La stringa all'interno sarà resa in corsivo. A differenza del i è più completo (a livello di tag aggiuntivi)-->
+
+        <br><br>
+
+        <!--
+            Gli attributi di un tag dell'html funzionano in questo modo:
+            <tag chiave="valore"></tag>
+            E' fondamentale rispettare la sintassi. Non è necessario rispettare l'ordine di inserimento degli attributi.
+        -->
+
+        <p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Questo link non è assolutamente sospetto!</a> 
+            <!--Il tag a definisce un link. Necessita di un attributo all'interno per sapere dove porta.-->
+            <!--href indica il sito a cui recarsi. target="_blank" implica l'apertura del sito in un altra pagina del browser.-->
+        </p>
+
+        <hr>
+
+        <img src="spongibob.png" width="270px"> 
+        <!--
+            Il tag img definisce un'immagine. Necessita di un attributo all'interno per sapere che immagine usare. Non va chiuso.
+            src (source) implica la sorgente dell'immagine. Va inserito il percorso esatto del file che si intende usare.
+            Se il file è nella stessa cartella del file di html basta inserire il nome del file + estensione.
+            width e height implicano altezza e larghezza dell'immagine in pixel. Se solo una delle due viene usata
+            si ridimensionerà sulla base delle dimensioni originali dell'immagine.
+        -->
+
+        <video width="520px" controls autoplay muted> <!--Il tag video definisce un video da inserire nella pagina. Width e Height funzionano anche qua.-->
+            <!--L'attributo controls definisce il player. Non ha valore. Autoplay implica l'inizio del video all'apertura della pagina. Muted muta il video.-->
+            <source src="shake.mp4" type="video/mp4"> <!--source è necessario per i video. contiene l'attributo src visto sopra. Type non è sempre necessario ma specifica il tipo di file-->
+            Il tuo browser non supporta questo player! <!--Frase che le persone vedranno se il player non è compatibile col browser-->
+        </video>
+
+        <hr>
+
+        <p>
+            Lista delle cose per cui dovresti ammazzarmi:<br>
+            <ul> <!--Tag ul (unordered list). Crea un elenco puntato. Ogni elemento è definito dal tag <li>-->
+                <li>Sto facendo HTML</li>
+                <li>Domani è natale</li>
+                <li>Odio i neg</li>
+            </ul>
+            <br>Dopodiché per ammazzarmi potresti scegliere fra:
+            <ol> <!--Tag ol (ordered list). Crea un elenco numerato. Ogni elemento è definito dal tag <li>-->
+                <li>Coltello</li>
+                <li>Pistola</li>
+                <li>Cianuro</li>
+                <li>Intossicazione da troie</li>
+            </ol>
+        </p>
+
+        <br><br>
+
+        <!--iframe crea embed di siti esterni. E' un contenitore di siti o tool esterni al nostro sito.-->
+        <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">WHOEVER LIKES THIS TWEET ILL SEND $50</p>&mdash; Speed⭐️ (@iShowSpeed)
+        <a href="https://twitter.com/iShowSpeed/status/1591927857756139521?ref_src=twsrc%5Etfw">November 13, 2022</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        <!--Per Youtube vai sul video > condividi > incorpora. Ti verrà dato l'iframe! Son quasi tutti uguali i social.-->
+
+        <br><hr>
+
+        <p style="font-family:sans-serif; text-align:center; color:aqua; font-variant: small-caps;"> <!--Accenno al CSS con l'attributo style. Possiamo metterci tutti gli attributi del CSS (Che non sappiamo ancora D:)-->
+            Ciao, questo testo sarà differente! Userò infatti style!
+        </p>
+
+        <div  style="font-family:sans-serif; text-align:center; color:aqua; background-color: cadetblue; padding:30px"> <!--Contenitore generico, molto importante.-->
+            <div style="color:cadetblue; background-color: aqua; padding:12px">
+                <h1>Contenitore generico molto sospetto.</h1>
+            </div>
+            <div style="background-color: gold; color:black; padding:12px">
+                <h2>Ancora più diverso!</h2>
+            </div>
+        </div>
+        <!--Nei div gli syle funzionano in modo diverso. I div esterni sono un "insieme principale" dove, se gli elementi dei div successivi
+            non specificano modifiche, verranno contenuti attributi comuni a tutti gli elementi dentro al div.
+        -->
+
+        <p>
+            Salve salvino usero lo <span style="background-color:aqua; color:blue">spannino.</span>
+            <br>Ed ora <span style="color:goldenrod">evidenzierò anche questa linea.</span>
+        </p>
+
+        <h2 id="pino">Ciao, sono un h2 chiamato pino!</h2> <!--L'attributo id da un "nome" a un tag. Non possono esistere due id uguali in due tag diversi. Non mettere spazi nel valore.-->
+        <h2 id="marco" class="maranza">E io invece sono un h2 chiamato marco con una classe chiamata maranza.</h2> <!--Class da degli attributi prefissati (tramite CSS o JS) a chi gli viene attribuito-->
+    </body>
+</html>
